@@ -3728,3 +3728,10 @@ svg#bigTriangleColor {
   background: #8657DB;
   padding: 10px 35px;
 }
+
+.row .woorank-lead-widget button:hover,
+.row .woorank-lead-widget input[type=submit]:hover
+{
+    border-color: #642bca;
+    background-color: #642bca;
+}
