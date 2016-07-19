@@ -3755,6 +3755,14 @@ svg#bigTriangleColor {
 {
   display: inline-block;
   margin: 10px;
+  background-color: #f8f8f8;
+  border-radius: 0;
+  border: 1px solid;
+  border-color: #f8f8f8;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  -webkit-transition: border-color 0.25s;
+  transition: border-color 0.25s;
 }
 
 
