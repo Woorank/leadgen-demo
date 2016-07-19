@@ -3744,9 +3744,9 @@ svg#bigTriangleColor {
   width: 640px;
 }
 
-.row .woorank-lead-widget form input[text],
-.row .woorank-lead-widget form input[email],
-.row .woorank-lead-widget form input[url]
+.row .woorank-lead-widget form input[type=text],
+.row .woorank-lead-widget form input[type=email],
+.row .woorank-lead-widget form input[type=url]
 {
   display: inline-block;
   margin: 10px;
