@@ -3732,6 +3732,24 @@ svg#bigTriangleColor {
 .row .woorank-lead-widget button:hover,
 .row .woorank-lead-widget input[type=submit]:hover
 {
-    border-color: #642bca;
-    background-color: #642bca;
+  border-color: #642bca;
+  background-color: #642bca;
 }
+
+
+.row .woorank-lead-widget form 
+{
+  display: block;
+  margin: auto;
+  width: 640px;
+}
+
+.row .woorank-lead-widget form input[text],
+.row .woorank-lead-widget form input[email],
+.row .woorank-lead-widget form input[url]
+{
+  display: inline-block;
+  margin: 10px;
+}
+
+
