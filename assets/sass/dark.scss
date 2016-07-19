@@ -1,0 +1,114 @@
+/* ------------------------------------- */
+/* DARK-VERSION ........................ */
+/* ------------------------------------- */
+@import "_base/_variables.scss";
+.dark {
+    background: $color-bg;
+    color:$color-dark-gray;
+	
+	h1, h2, h3, h4, h5, h6 {
+		color:$color-white;
+	}
+	a {
+		color:$color-light-gray;
+	}
+	#loading {
+	  background-color: $color-dark;
+	}
+	.title-section h5{
+		color:$color-dark-gray;
+	}
+	.separator span::before, .separator span::after{
+		border-color: $color-dark-gray;
+	}
+	.cd-nav-container {
+		background-color:$color-dark;
+	}
+	.navigation.nav-up a span {
+      background-color: $color-light-gray;
+    }
+	.cd-close-nav::after, .cd-close-nav::before {
+		background-color: $color-white;
+	}
+	.skew-section{
+		background-color:$color-dark;
+	}
+	.container-about:before , .container-about:after{
+	 border-color:$color-dark;
+	}
+	.service-rotate:after {
+		background-color: $color-dark-gray;
+	}
+	.service-rotate:before{
+		border-color: $color-dark-gray;
+	}
+	.skills , .services , .team , .pricing-item , .item-post {
+		 background-color:$color-dark;
+	}
+	.team-member{
+		background-color:$color-bg;
+	}
+	.timeline .timeline-box .timeline-title {
+       color: $color-light-gray;
+	}
+	.timeline .timeline-box , .timeline .timeline-box:after{
+		background-color: $color-dark;
+	}
+	.process:before {
+        background-color: $color-dark-gray;
+	}
+	.timeline .timeline-box:nth-of-type(1n):before {
+		border-left: 10px solid $color-dark;
+		border-right: 0 solid $color-dark;
+	}
+	.timeline .timeline-box:nth-of-type(2n):before {
+		border-left: 0 solid $color-dark;
+		border-right: 10px solid $color-dark;
+	}
+	.pricing-item .pricing-price {
+       color: $color-white;
+	}
+	.input_field { 
+		background-color: $color-dark; 
+		border-color: $color-dark;
+	}
+	.popup-gmaps {
+		color: $color-white;
+		background-color: $color-dark;
+		border-color: $color-dark;
+	}
+	#trianglePath2 {
+		fill: $color-dark;
+	}
+	.owl-about .owl-item{
+		cursor: url(../images/swipe-white.png) , ew-resize;
+	}
+	.share-links{
+		background-color: $color-dark;
+	}
+	.widget .title-widget h3{
+		 background:  $color-bg;
+	}
+	.search_block form input.serch_input  , .tags-share .share-links{
+		color: $color-white;
+		background:  $color-bg;
+	}
+	.social_links_widget a , .tagcloud a {
+		background: $color-dark;
+		color:  $color-white;
+	}
+	.social_links_widget a:hover , .tagcloud a:hover ,  {
+		background:$color-primary;
+	}
+	.post {
+		background-color: $color-dark;
+	}
+	.pagination > li > a, .pagination > li > span {
+		color:  $color-white;
+		background-color: $color-dark;
+	}
+	.pagination li.active-page a, .pagination > li > a:focus, 
+	.pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
+       background:$color-primary;
+	}
+}

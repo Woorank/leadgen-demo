@@ -1,0 +1,114 @@
+/* ------------------------------------- */
+/* DARK-VERSION ........................ */
+/* ------------------------------------- */
+.dark {
+  background: #1f1f1f;
+  color: #909090;
+}
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #FFF;
+}
+.dark a {
+  color: #e9e9e9;
+}
+.dark #loading {
+  background-color: #3c3c3c;
+}
+.dark .title-section h5 {
+  color: #909090;
+}
+.dark .separator span::before, .dark .separator span::after {
+  border-color: #909090;
+}
+.dark .cd-nav-container {
+  background-color: #3c3c3c;
+}
+.dark .navigation.nav-up a span {
+  background-color: #e9e9e9;
+}
+.dark .cd-close-nav::after, .dark .cd-close-nav::before {
+  background-color: #FFF;
+}
+.dark .skew-section {
+  background-color: #3c3c3c;
+}
+.dark .container-about:before, .dark .container-about:after {
+  border-color: #3c3c3c;
+}
+.dark .service-rotate:after {
+  background-color: #909090;
+}
+.dark .service-rotate:before {
+  border-color: #909090;
+}
+.dark .skills, .dark .services, .dark .team, .dark .pricing-item, .dark .item-post {
+  background-color: #3c3c3c;
+}
+.dark .team-member {
+  background-color: #1f1f1f;
+}
+.dark .timeline .timeline-box .timeline-title {
+  color: #e9e9e9;
+}
+.dark .timeline .timeline-box, .dark .timeline .timeline-box:after {
+  background-color: #3c3c3c;
+}
+.dark .process:before {
+  background-color: #909090;
+}
+.dark .timeline .timeline-box:nth-of-type(1n):before {
+  border-left: 10px solid #3c3c3c;
+  border-right: 0 solid #3c3c3c;
+}
+.dark .timeline .timeline-box:nth-of-type(2n):before {
+  border-left: 0 solid #3c3c3c;
+  border-right: 10px solid #3c3c3c;
+}
+.dark .pricing-item .pricing-price {
+  color: #FFF;
+}
+.dark .input_field {
+  background-color: #3c3c3c;
+  border-color: #3c3c3c;
+}
+.dark .popup-gmaps {
+  color: #FFF;
+  background-color: #3c3c3c;
+  border-color: #3c3c3c;
+}
+.dark #trianglePath2 {
+  fill: #3c3c3c;
+}
+.dark .owl-about .owl-item {
+  cursor: url(../images/swipe-white.png), ew-resize;
+}
+.dark .share-links {
+  background-color: #3c3c3c;
+}
+.dark .widget .title-widget h3 {
+  background: #1f1f1f;
+}
+.dark .search_block form input.serch_input, .dark .tags-share .share-links {
+  color: #FFF;
+  background: #1f1f1f;
+}
+.dark .social_links_widget a, .dark .tagcloud a {
+  background: #3c3c3c;
+  color: #FFF;
+}
+.dark .social_links_widget a:hover, .dark .tagcloud a:hover {
+  background: #8657DB;
+}
+.dark .post {
+  background-color: #3c3c3c;
+}
+.dark .pagination > li > a, .dark .pagination > li > span {
+  color: #FFF;
+  background-color: #3c3c3c;
+}
+.dark .pagination li.active-page a, .dark .pagination > li > a:focus,
+.dark .pagination > li > a:hover, .dark .pagination > li > span:focus, .dark .pagination > li > span:hover {
+  background: #8657DB;
+}
+
+/*# sourceMappingURL=dark.css.map */

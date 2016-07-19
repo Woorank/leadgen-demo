@@ -1,0 +1,218 @@
+// ----------------------------------------------------------------------
+  // placeholder text color
+  // example: @include placeholder-color(#333);
+// ----------------------------------------------------------------------
+@mixin placeholder-color($color) {
+  &.placeholder {
+    color: $color
+  }
+  &:-moz-placeholder {
+    color: $color
+  }
+  &::-webkit-input-placeholder {
+    color: $color
+  }
+  &:-ms-input-placeholder {
+    color: $color
+  }
+}
+
+// ----------------------------------------------------------------------
+  // Box Shadow
+  // example: @include box-shadow(1px, 2px, 2px, 2px, #000);
+// ----------------------------------------------------------------------
+@mixin box-shadow($hoff: false, $voff: false, $blur: false, $spread: false, $color: false){
+  -webkit-box-shadow: $hoff $voff $blur $spread $color;
+     -moz-box-shadow: $hoff $voff $blur $spread $color;
+          box-shadow: $hoff $voff $blur $spread $color;
+}
+
+// ----------------------------------------------------------------------
+  // Text Shadow
+  // example: @include single-text-shadow(1px, 2px, 2px, #000);
+// ----------------------------------------------------------------------
+@mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+  text-shadow: $hoff $voff $blur $color;
+}
+
+// ----------------------------------------------------------------------
+  // Rounded radius
+  // example: @include border-radius(10px);
+// ----------------------------------------------------------------------
+@mixin border-radius($size) {
+  -webkit-border-radius: $size ;
+     -moz-border-radius: $size ;
+      border-radius: $size;
+}
+
+// ----------------------------------------------------------------------
+  // Linear Gradients
+  // example: @include linearGradient(#cccccc, #333333);
+// ----------------------------------------------------------------------
+@mixin linearGradient($top, $bottom) {
+  background: #{$top};
+  background:   -moz-linear-gradient(left, #{$top} 0%, #{$bottom} 100%);
+  background:   -webkit-gradient(linear, left top, right top, color-stop(0%, #{$top}), color-stop(100%, #{$bottom}));
+  background:   -webkit-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   -o-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   -ms-linear-gradient(left, #{$top} 0%, #{$bottom} 100%); 
+  background:   linear-gradient(to right, #{$top} 0%, #{$bottom} 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}', GradientType=0 );
+}
+// ----------------------------------------------------------------------
+  // Linear Gradient angle
+  // example: @include linear-gradient(-10, #cccccc, #333333);
+// ----------------------------------------------------------------------
+@mixin linear-gradient($angle, $colorStart, $colorStop){
+    background: #{$colorStart}; 
+	background: -webkit-linear-gradient($angle,  #{$colorStart} 0%,#{$colorStop} 100%); 
+    background:    -moz-linear-gradient($angle,  #{$colorStart} 0%,#{$colorStop} 100%); 
+    background:      -o-linear-gradient($angle,  #{$colorStart} 0%,#{$colorStop} 100%); 
+    background:     -ms-linear-gradient($angle,  #{$colorStart} 0%,#{$colorStop} 100%); 
+    background:         linear-gradient(to $angle,  #{$colorStart} 0%,#{$colorStop} 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$colorStart}', endColorstr='#{$colorStop}',GradientType=1 ); 
+}
+// ----------------------------------------------------------------------
+   // Animations
+   //example: @include animation('slide-down 5s 3');
+// ----------------------------------------------------------------------
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+     -moz-animation: #{$str};
+     -ms-animation: #{$str};
+     -o-animation: #{$str};
+     animation: #{$str};
+}
+// ----------------------------------------------------------------------
+  // Transitions
+  // example: @include single-transition(background, 1s, ease-in-out);
+  // example: @include double-transition(background, 1s, ease-in-out, 0, opacity, .1s, ease-in-out, 0);
+// ----------------------------------------------------------------------
+@mixin single-transition($property, $duration, $timing-function) {
+  -webkit-transition: $property $duration $timing-function;
+     -moz-transition: $property $duration $timing-function;
+       -o-transition: $property $duration $timing-function;
+          transition: $property $duration $timing-function;
+}
+@mixin double-transition($property1, $duration1, $timing-function1, $delay1, $property2, $duration2, $timing-function2, $delay2) {
+  -webkit-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+     -moz-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+       -o-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+          transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
+}
+
+
+// ----------------------------------------------------------------------
+   // Transform skew
+  // example:  @include rotate(10);  @include scale(5);	 @include translate(25,10);	 @include skew(25,10);  @include transform-origin(top left);
+  //           @include translateXYrotate (1px , -1px , -45deg);
+// ----------------------------------------------------------------------
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+     transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+ 
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// translateZ
+@mixin translateZ ($z) {
+   @include transform(translateZ($z));
+}
+// translateY
+@mixin translateY ($y) {
+   @include transform(translateY($y));
+}
+// translateX
+@mixin translateX ($x) {
+   @include transform(translateX($x));
+}
+// translateXY
+@mixin translateXY ($x , $y ) {
+   @include transform( translateX($x) translateY($y));
+}
+// translateXYrotate
+@mixin translateXYrotate ($x , $y , $d) {
+   @include transform( translateX($x) translateY($y) rotate($d));
+}
+
+			  
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+// ----------------------------------------------------------------------
+  // Media Queries
+  // Devices Media Queries
+	$special-phone: 667px;
+	$special-tablet: 990px;
+	
+ // General Media Queries
+	$phone-width: 480px;
+	$tablet-width: 768px;
+	$medium-width: 1024px;
+	$notebook-width: 1280px;
+	$desktop-width: 1600px;
+// ----------------------------------------------------------------------
+@mixin landscape-phone {
+    @media screen and (max-width: $special-phone) {
+        @content;
+    }
+}
+
+@mixin landscape-tablet {
+    @media only screen and (max-width: $special-tablet){
+        @content;
+    }
+}
+
+@mixin phone {
+    @media only screen and (max-width: $phone-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media only screen and (max-width: $medium-width) {
+        @content;
+    }
+}
+
+@mixin notebook {
+    @media only screen and (max-width: $notebook-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (max-width: $desktop-width) {
+        @content;
+    }
+}
