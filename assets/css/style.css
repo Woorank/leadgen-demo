@@ -3744,6 +3744,15 @@ svg#bigTriangleColor {
   width: 640px;
 }
 
+@media (max-width: 650px) {
+  .row .woorank-lead-widget form 
+  {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+}
+
 .row .woorank-lead-widget .woorank-widget-loader
 {
   margin-top:25px;
