@@ -3744,15 +3744,6 @@ svg#bigTriangleColor {
   width: 640px;
 }
 
-@media (max-width: 650px) {
-  .row .woorank-lead-widget form 
-  {
-    display: block;
-    margin: auto;
-    width: 100%;
-  }
-}
-
 .row .woorank-lead-widget .woorank-widget-loader
 {
   margin-top:25px;
@@ -3774,4 +3765,18 @@ svg#bigTriangleColor {
   transition: border-color 0.25s;
 }
 
+@media (max-width: 650px) {
+  .row .woorank-lead-widget form 
+  {
+    display: inline;
+  }
+
+  .row .woorank-lead-widget form input[type=text],
+  .row .woorank-lead-widget form input[type=email],
+  .row .woorank-lead-widget form input[type=url]
+  {
+    display: block;
+    margin: 10px auto;
+  }
+}
 
