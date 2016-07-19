@@ -3708,3 +3708,22 @@ svg#bigTriangleColor {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
+.row .woorank-lead-widget button {
+  /* color: red; */
+  color: #fff;
+  border-color: #642bca;
+  background-color: #642bca;
+  margin: 1em auto;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background: #8657DB;
+  padding: 10px 35px;
+}
