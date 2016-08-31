@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +78,6 @@
                         </span>
                     </h1>
                     <h3>We'll make sure people will find you on the web.</h3>
-                    <a href="#leadgen" class="btn"><i class="fa fa-long-arrow-right"></i>Try for free</a>
                 </div>
                 <!-- .text-center -->
             </div>
@@ -98,9 +98,26 @@
             <div class="row">
                 <div class="js-woorank-lead-widget woorank-lead-widget"></div>
                  <script type="text/javascript">
+                  function getSearchParameters() {
+                    var prmstr = window.location.search.substr(1);
+                    return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+                  }
+
+                  function transformToAssocArray( prmstr ) {
+                    var params = {};
+                    var prmarr = prmstr.split("&");
+                    for ( var i = 0; i < prmarr.length; i++) {
+                      var tmparr = prmarr[i].split("=");
+                      params[tmparr[0]] = tmparr[1];
+                    }
+                    return params;
+                 }
+                 var users = {flora: 743619, ignacio: 716915};
+                 var selectedUser = getSearchParameters().u || 'flora';
                  window.woorankLGO = window.woorankLGO || {};
-                 window.woorankLGO.ownerId = 716915;
+                 window.woorankLGO.ownerId = users[selectedUser];
                  window.woorankLGO.bgColor = 'FFFFFF';
+
                  (function() {
                      var wl = document.createElement('script'); wl.type = 'text/javascript'; wl.async = true;
                      wl.src = 'https://www.woorank.com/en/widget/script';
@@ -119,11 +136,11 @@
                     <div class="col-md-8 col-sm-8 col-xs-12">
                         <p class="bold">We will help your brand get more easily found on the web.</p>
                         <ul>
-                            <li>SERP checking</li>
-                            <li>Backlink data</li>
+                            <li>Keyword tracking</li>
+                            <li>Backlink analysis</li>
                             <li>Usability report</li>
                             <li>Crawl errors</li>
-                            <li>Local scan</li>
+                            <li>Local ranking factors</li>
                             <li>Visitor data</li>
                         </ul>
                     </div>
@@ -150,7 +167,7 @@
                         </div>
                         <!-- end icon-wrap -->
                         <div class="title-wrap">
-                            <h4>Who We Are</h4>
+                            <h4>WHO WE ARE</h4>
                             <p>21 passionate developers, marketers, content writers, customer success teammates and business developers</p>
                         </div>
                         <!-- end title-wrap -->
@@ -162,8 +179,8 @@
                         </div>
                         <!-- end icon-wrap -->
                         <div class="title-wrap">
-                            <h4>What We Do</h4>
-                            <p>We generate instant website reviews that offer a ton of valuable data combined with a list of comprehensive tasks</p>
+                            <h4>WHAT WE DO</h4>
+                            <p>We generate instant website reviews that offer a ton of valuable data combined with a comprehensibe list of actionable tasks</p>
                         </div>
                         <!-- end title-wrap -->
                     </div>
@@ -174,7 +191,7 @@
                         </div>
                         <!-- end icon-wrap -->
                         <div class="title-wrap">
-                            <h4>Our Process</h4>
+                            <h4>OUR PROCESS</h4>
                             <p>Helping businesses and online marketers achieve higher search engine rankings, convert more visitors into customers. </p>
                         </div>
                         <!-- end title-wrap -->
@@ -186,8 +203,8 @@
                         </div>
                         <!-- end icon-wrap -->
                         <div class="title-wrap">
-                            <h4>Endless Possibilities</h4>
-                            <p>Keep track of your competitors and get more return on their digital marketing investments. </p>
+                            <h4>ENDLESS POSSIBILITIES</h4>
+                            <p>Keep track of your SEO and get more return on your digital marketing investments. </p>
                         </div>
                         <!-- end title-wrap -->
                     </div>
@@ -198,7 +215,7 @@
                         </div>
                         <!-- end icon-wrap -->
                         <div class="title-wrap">
-                            <h4>For who</h4>
+                            <h4>FOR WHO</h4>
                             <p>Every day, more than 40,000 companies rely on WooRank to analyze their websites and receive clear, actionable insights on how they can be optimized.</p>
                         </div>
                         <!-- end title-wrap -->
@@ -210,7 +227,7 @@
                         </div>
                         <!-- end icon-wrap -->
                         <div class="title-wrap">
-                            <h4>Our mission</h4>
+                            <h4>OUR MISSION</h4>
                             <p>At WooRank we want to continue to provide you with as much information as possible to help you get your business found online.</p>
                         </div>
                         <!-- end title-wrap -->
@@ -222,8 +239,8 @@
                         </div>
                         <!-- end icon-wrap -->
                         <div class="title-wrap">
-                            <h4>Join us</h4>
-                            <p>we are looking for exceptional co-workers with solid problem-solving skills to join our team and create future-proof solutions.</p>
+                            <h4>JOIN US</h4>
+                            <p>We are looking for exceptional co-workers with solid problem-solving skills to join our team and create future-proof solutions.</p>
                         </div>
                         <!-- end title-wrap -->
                     </div>
@@ -370,7 +387,7 @@
                 <li class="timeline-box wow fadeInRight">
                     <i class="icon-chat"></i>
                     <p class="timeline-title">XML SITEMAPS</p>
-                    <p class="timeline-details">An XML Sitemap is a text file used to detail all URLs on a website. It can include extra information (metadata) on each URL, with details of when they were last updated</p>
+                    <p class="timeline-details">An XML Sitemap is a text file used to detail all URLs on a website. It can include extra information (metadata) on each URL to help search engines crawl your site more intelligently.</p>
                     <span>2</span>
                 </li>
                 <li class="timeline-box  wow fadeInLeft">
@@ -523,7 +540,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-12">
                     <h4>Email</h4>
-                    <p>support@woorank.com</p>
+                    <p>leadgen@woorank.com</p>
 
                     <h4>OFFICE ADDRESS</h4>
                     <p>Bd. Louis Schmidt 29</p>
@@ -609,3 +626,4 @@
 </body>
 
 </html>
+
