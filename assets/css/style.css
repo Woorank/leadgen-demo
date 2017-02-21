@@ -564,7 +564,7 @@ p {
 /* parallax */
 .parallax.hero {
   background-image: url(../images/header.png);
-  height: 700px;
+  height: 500px;
 }
 
 .parallax {
