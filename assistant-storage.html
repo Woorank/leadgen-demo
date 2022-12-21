@@ -17,7 +17,12 @@
             console.log('has access');
           } else {
             // display the button to request storage access
-            document.getElementById('request-storage-access').style.display = 'block';
+            const requestStorageButton = document.getElementById('request-storage-access');
+            requestStorageButton.style.display = 'block';
+            requestStorageButton.addEventListener('click', (event) => {
+              requestStorageAccess();
+            });
+            documen
           }
         }
         main();
