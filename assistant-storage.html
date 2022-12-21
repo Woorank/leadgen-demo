@@ -20,7 +20,16 @@
             const requestStorageButton = document.getElementById('request-storage-access');
             requestStorageButton.style.display = 'block';
             requestStorageButton.addEventListener('click', (event) => {
-              document.requestStorageAccess();
+              document.requestStorageAccess()
+                .then(
+                  () => {
+                    console.log('access granted');
+                    // post message back to parent frame
+                    window.parent.postMessage('storage-access-granted', '*');
+                  },
+                  () => { console.log('access denied') }
+                );
+              // if
             });
           }
         }
