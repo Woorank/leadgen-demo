@@ -7,8 +7,25 @@
     <script src="script.js"></script>
   </head>
   <body>
+    // button that call document.requestStorageAccess() on click
+    <button id="request-storage-access" style="display:none">Request Storage Access</button>
     <!-- page content -->
     <script type="text/javascript">
+      (function () {
+        if (!document.hasStorageAccess) return;
+
+        async function main() {
+          const hasAccess = await document.hasStorageAccess();
+          if (hasAccess) {
+            console.log('has access');
+          } else {
+            // display the button to request storage access
+            document.getElementById('request-storage-access').style.display = 'block';
+          }
+        }
+        main();
+
+      })();
     </script>
   </body>
 </html>
